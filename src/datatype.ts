@@ -40,3 +40,43 @@ let error = () => {
 let endless = () => {
   while(true) {}
 }
+
+// 数字枚举 可以反向映射 
+enum Role {
+  Reporter,
+  Developer,
+  Maintainer,
+  Owner,
+  Guest
+}
+console.log(Role.Reporter) // 0
+
+// 字符串枚举 不可以反向映射
+enum Message {
+  Success = '成功了',
+  Fail = '失败了'
+}
+
+// 异构枚举
+enum Answer {
+  N,
+  Y = 'Yes'
+}
+
+// 常量枚举
+const enum Month {
+  Jan,
+  Feb,
+  Mar
+}
+
+// 枚举类型
+enum E { a, b}
+enum F { a = 0, b = 1}
+enum G { a = 'apple', b = 'banana'}
+
+let e: E = 3
+let f: F = 3
+
+let g1: G = G.a
+let g2: G.a = G.a
