@@ -55,3 +55,48 @@
 
 > 枚举：一组有名字的常量集合
 
+## 函数定义的几种方式
+
+### 1. function
+
+```TypeScript
+  function add1(x: number, y: number) {
+    return x + y
+  }
+```
+
+### 2. 
+
+```TypeScript
+  let add2:  (x: number, y: number)  => number
+```
+
+### 3.
+
+```TypeScript
+type add3 = (x: number, y: number) => number
+```
+
+### 4.
+```TypeScript
+interface add4 {
+  (x: number, y: number): number
+}
+```
+
+参数的限制：必须数量一致
+
+### 可选参数
+
+```TypeScript
+  function add5(x: number, y?: number) {
+    return y ? x+y : x;
+  }
+```
+
+### 参数默认值
+```TypeScript
+  function add6(x: number, y = 0) {
+    return x + y;
+  }
+```
